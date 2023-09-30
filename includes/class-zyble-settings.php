@@ -44,6 +44,7 @@ class Zyble_Settings
                 <label for="api_key">API Key:</label>
                 <input type="text" name="api_key" id="api_key" value="<?php echo esc_attr(get_option('zyble_api_key')); ?>" class="regular-text">
                 <p class="description">Enter your API key for accessing the Zyble API. Don't have an API key? <a href="https://zyble.io/" target="_blank">Get here</a></p>
+                <p><code>[ai_tools]</code> add this shortcode to any page or post to show latest tools. Make sure you add the zyble's api first.</p>
                 <?php submit_button('Save Settings'); ?>
             </form>
 
