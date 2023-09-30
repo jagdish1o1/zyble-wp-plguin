@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Zyble.io WP Integration
  * Description: Integrate Zyble.io API with your WordPress site easily.
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Zyble.io
  * Author URI: https://zyble.io
  * License: GPLv2 or later
