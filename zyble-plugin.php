@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Zyble.io Integration
- * Description: Integrate Zyble API in your WordPress site easily.
- * Version: 1.0
+ * Plugin Name: Zyble.io WP Integration
+ * Description: Integrate Zyble.io API with your WordPress site easily.
+ * Version: 1.0.1
  * Author: Zyble.io
  * Author URI: https://zyble.io
  * License: GPLv2 or later
@@ -14,6 +14,15 @@
 if (!defined('ABSPATH')) {
     exit;
 }
+
+if( ! class_exists( 'Zyble_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+
+$updater = new Zyble_Updater( __FILE__ );
+$updater->set_username( 'jagdish1o1' );
+$updater->set_repository( 'zyble-wp-plguin' );
+$updater->initialize();
 
 // Include the necessary files
 require_once plugin_dir_path(__FILE__) . 'includes/class-zyble-activation.php';
@@ -36,4 +45,3 @@ function zyble_init()
     $zyble_settings->init();
 }
 add_action('plugins_loaded', 'zyble_init');
-

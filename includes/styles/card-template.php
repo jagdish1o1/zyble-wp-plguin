@@ -167,8 +167,11 @@
                     <?php echo $tool['description']; ?>
                 </p>
                 <div class="ai-footer-element">
-                    <a
-                        href="<?php echo esc_url(add_query_arg(array('utm_source' => 'zyble.io', 'utm_medium' => get_bloginfo('name'), 'utm_campaign' => 'zyble.io'), $tool['url'])); ?>" target="_blank" rel="nofollow">Visit site</a>
+                    <?php if ( isset($tool['affiliate_link']) ): ?>
+                        <a href="<?php echo esc_url($tool['affiliate_link']); ?>" target="_blank" rel="nofollow">Visit site</a>
+                    <?php else: ?>
+                        <a href="<?php echo esc_url(add_query_arg(array('utm_source' => 'zyble.io', 'utm_medium' => get_bloginfo('name'), 'utm_campaign' => 'zyble.io'), $tool['url'])); ?>" target="_blank" rel="nofollow">Visit site</a>
+                    <?php endif; ?>
                 </div>
             </div>
 
